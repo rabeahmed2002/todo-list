@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    padding: 10px;
+
+    background-image: linear-gradient(
+        55deg,
+        hsl(240deg 100% 35%) 0%,
+        hsl(255deg 100% 35%) 5%,
+        hsl(263deg 100% 35%) 10%,
+        hsl(268deg 100% 35%) 14%,
+        hsl(273deg 100% 35%) 19%,
+        hsl(277deg 100% 35%) 24%,
+        hsl(281deg 100% 35%) 29%,
+        hsl(285deg 100% 35%) 33%,
+        hsl(288deg 100% 35%) 38%,
+        hsl(292deg 100% 35%) 43%,
+        hsl(295deg 100% 35%) 48%,
+        hsl(298deg 100% 35%) 52%,
+        hsl(301deg 100% 36%) 57%,
+        hsl(304deg 100% 38%) 62%,
+        hsl(307deg 100% 39%) 67%,
+        hsl(309deg 100% 41%) 71%,
+        hsl(311deg 100% 43%) 76%,
+        hsl(313deg 100% 44%) 81%,
+        hsl(315deg 100% 46%) 86%,
+        hsl(316deg 100% 47%) 90%,
+        hsl(318deg 100% 49%) 95%,
+        hsl(319deg 100% 50%) 100%
+      );
+
+}
+
+
+.todo-list{
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+}
+
+.todo-list h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: rgb(24, 0, 109);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+}
+
+#input-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 40%;
+    padding: 8px;
+    background: #edeef0;
+    border-radius: 10px;
+
+    padding-left: 25px;
+    /* margin-bottom: 20px; */
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 7px 40px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid black;
+    top: 8px;
+    left: 8px;
+    cursor: pointer;
+}
+
+ul li.checked{
+    color: green;
+    text-decoration: line-through;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 40px;
+    height: 25px;
+    font-size: 22px;
+    color: #555;
+    list-style: 40px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
