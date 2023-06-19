@@ -17,21 +17,16 @@ function signup(event){
   let emailVar=document.getElementById("signup_email").value
   let passwordVar=document.getElementById("signup_password").value
   
-  
   console.log(nameVar, " ", emailVar, " ", passwordVar);
 
   localStorage.setItem("names", nameVar)
   localStorage.setItem("emails", emailVar)
   localStorage.setItem("passwords", passwordVar)
 
+  document.getElementById("signup_form").reset();
 
 }
 
-function resetFields(){
-  document.getElementById("name").reset()
-  document.getElementById("email").reset()
-  document.getElementById("password").reset()
-}
 
 
 function login(event){
@@ -49,7 +44,7 @@ function login(event){
 
   if (emailVar==emails && passwordVar==passwords) {
     console.log("login successful");
-    window.location.href="../todo/index.html"
+    window.location.href="../assets/todo/index.html"
   } else {
     console.log("Incorrect email and password");
     alert("Re-enter credentials or create new account")
