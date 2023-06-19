@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+/* TODO LIST STYLES */
+
+
 *{
     margin: 0;
     padding: 0;
@@ -72,7 +84,6 @@
     border-radius: 10px;
 
     padding-left: 25px;
-    /* margin-bottom: 20px; */
 }
 
 input{
@@ -97,7 +108,7 @@ button{
 ul li{
     list-style: none;
     font-size: 16px;
-    padding: 12px 8px 12px 50px;
+    padding: 20px 8px 12px 50px;
     user-select: none;
     position: relative;
 }
@@ -105,25 +116,39 @@ ul li{
 ul li::before{
     content: '';
     position: absolute;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     border-radius: 50px;
-    background: transparent;
+    background: white;
+    background-size: cover;
+    background-position: center;
     border: 1px solid black;
-    top: 8px;
+    top: 18px;
     left: 8px;
     cursor: pointer;
 }
 
 ul li.checked{
-    color: green;
     text-decoration: line-through;
+    border: none;
+
+}
+
+ul li.checked:before{
+    border: 1px solid white;
+    text-decoration: line-through;
+    background-image: url('img/done.png');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+
+  
 }
 
 ul li span{
     position: absolute;
     right: 0;
-    top: 10px;
+    top: 17px;
     width: 40px;
     height: 25px;
     font-size: 22px;
@@ -135,4 +160,4 @@ ul li span{
 
 ul li span:hover{
     background: #edeef0;
-}
+} 
